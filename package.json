@@ -1,0 +1,23 @@
+{
+  "name": "will",
+  "version": "0.0.1",
+  "description": "基于Vue实现的U库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lynchuh/will-component.git"
+  },
+  "keywords": [
+    "Vue",
+    "UI"
+  ],
+  "author": "lynchuh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lynchuh/will-component/issues"
+  },
+  "homepage": "https://github.com/lynchuh/will-component#readme"
+}
