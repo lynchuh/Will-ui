@@ -5,6 +5,16 @@
 </template>
 <script>
 import Row from './row'
+let validator=(value)=>{
+  let keys=Object.keys(value)
+  let valid = true
+  keys && keys.map((key)=>{
+    if(!(['offset','span'].indexOf(key)>=0)){
+      valid = false
+    }
+  })
+  return valid
+}
 export default {
   name:'WillColumn',
   components:{
@@ -18,14 +28,29 @@ export default {
     offset:{
       type:[String,Number],
       default:0,
-    }
+    },
+    ipad:{type:Object,validator},
+    narrowPc:{type:Object,validator},
+    pc:{type:Object,validator},
+    widePc:{type:Object,validator},
+    
   },
   computed:{
     classes(){
-      return{
-        [`span-${this.span}`]:this.span,
-        [`offset-${this.offset}`]:this.offset !== 0 
+      let{offset,span,ipad,narrowPc,pc,widePc}=this
+      let getClass=(classObj,str='phone-')=>{
+        let classArray=[]
+        classObj && classObj.span && classArray.push(`col-${str}${classObj.span}`)
+        classObj && classObj.offset && classArray.push(`col-${str}${classObj.offset}`)
+        return classArray
       }
+      return[
+        ...getClass({offset,span}),
+        ...getClass(ipad,'ipad-'),
+        ...getClass(narrowPc,'narrow-pc-'),
+        ...getClass(pc,'pc-'),
+        ...getClass(widePc,'wide-pc-'),
+      ]
     }
   }
 }

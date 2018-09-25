@@ -1,5 +1,5 @@
 <template>
-  <div class="w-col">
+  <div class="w-row">
     <slot></slot>
   </div>
 </template>
