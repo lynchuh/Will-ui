@@ -21,6 +21,11 @@ export default {
   components: {
     "w-row": Row
   },
+  data(){
+    return{
+      gutter:0,
+    }
+  },
   props: {
     span: {
       type: [String, Number],
@@ -76,11 +81,9 @@ $class-wide-pc-width-prefix: "col-wide-pc-";
 $class-wide-pc-offset-prefix: "offset-wide-pc-";
 
 .w-col {
-  border:1px solid #999;
   min-height: 30px;
   display: flex;
   flex-direction: column;
-  background: #ddd;
   transition: all 0.3s;
   @for $n from 1 through 24 {
     &.#{$class-width-prefix}#{$n} {
@@ -97,7 +100,6 @@ $class-wide-pc-offset-prefix: "offset-wide-pc-";
   //ipad
   .w-col {
     transition: all 0.3s;
-    border: 1px solid red;
     @for $n from 1 through 24 {
       &.#{$class-ipad-width-prefix}#{$n} {
         width: ($n/24) * 100%;
@@ -114,7 +116,6 @@ $class-wide-pc-offset-prefix: "offset-wide-pc-";
   //narrow-pc
   .w-col {
     transition: all 0.3s;
-    border: 1px solid blue;
     @for $n from 1 through 24 {
       &.#{$class-narrow-pc-width-prefix}#{$n} {
         width: ($n/24) * 100%;
@@ -131,7 +132,6 @@ $class-wide-pc-offset-prefix: "offset-wide-pc-";
   //pc
   .w-col {
     transition: all 0.3s;
-    border: 1px solid yellow;
     @for $n from 1 through 24 {
       &.#{$class-pc-width-prefix}#{$n} {
         width: ($n/24) * 100%;
@@ -148,7 +148,6 @@ $class-wide-pc-offset-prefix: "offset-wide-pc-";
   //wide-pc
   .w-col {
     transition: all 0.3s;
-    border: 1px solid green;
     @for $n from 1 through 24 {
       &.#{$class-wide-pc-width-prefix}#{$n} {
         width: ($n/24) * 100%;
