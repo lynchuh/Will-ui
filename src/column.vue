@@ -1,5 +1,5 @@
 <template>
-  <div class="w-col" :class="classes">
+  <div class="w-col" :class="classes" :style="colStyle">
     <slot></slot>
   </div>
 </template>
@@ -21,10 +21,10 @@ export default {
   components: {
     "w-row": Row
   },
-  data(){
-    return{
-      gutter:0,
-    }
+  data() {
+    return {
+      gutter: 0
+    };
   },
   props: {
     span: {
@@ -60,6 +60,12 @@ export default {
         ...getClass(pc, "pc-"),
         ...getClass(widePc, "wide-pc-")
       ];
+    },
+    colStyle() {
+      return {
+        paddingLeft: this.gutter / 2 + "px",
+        paddingRight: this.gutter / 2 + "px"
+      };
     }
   }
 };
