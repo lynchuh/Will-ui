@@ -1,7 +1,7 @@
 {
   "name": "will",
   "version": "0.0.1",
-  "description": "基于Vue实现的U库",
+  "description": "基于Vue实现的UI库",
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html --no-cache",
