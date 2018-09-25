@@ -14,6 +14,15 @@ Vue.component('w-button-group',ButtonGroup)
 new Vue({
   el:'#app',
   data:{
-    loading1:false
+    loading1:false,
+    message:''
+  },
+  methods:{
+    changeValue(e){
+      console.log(e)
+    },
+    changeMessage(){
+      this.message="??"
+    }
   }
 })

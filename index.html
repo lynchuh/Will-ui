@@ -25,12 +25,15 @@
       <w-button icon="right" icon-position="right">下一页</w-button>
     </w-button-group> -->
 
-    <w-input value="我是value"></w-input>
-    <w-input placeholder="我是value"></w-input>
-    <w-input placeholder="我是value" error="我是错误"></w-input>
-    <w-input placeholder="我是value" disabled></w-input>
-    <w-input placeholder="我是value" readonly></w-input>
-
+    <w-input value="设置默认value值"></w-input>
+    <w-input placeholder="设置placeholder"></w-input>
+    <w-input placeholder="错误提示显示" error="我是错误"></w-input>
+    <w-input placeholder="这是disabled状态" disabled></w-input>
+    <w-input placeholder="这是readonly状态" readonly></w-input>
+    <w-input placeholder="支持事件触发" @change="changeValue"></w-input>
+    <w-input placeholder="双向绑定value值" v-model="message"></w-input>
+    <span>{{message}}</span>
+    <button @click="changeMessage">点我改变</button>
 
   </div>
   <script src="./src/app.js"></script>
