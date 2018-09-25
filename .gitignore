@@ -1,0 +1,10 @@
+# 依赖包
+/node_modules
+# vscode配置
+.vscode
+# pacel build 产生的缓存
+.cache
+#
+.npmrc
+
+/dist
