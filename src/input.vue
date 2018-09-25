@@ -1,8 +1,9 @@
 <template>
-  <div class="input-wrapper">
+  <div class="input-wrapper" :class="{error}">
     <input type="text" :value=value :placeholder="placeholder">
-    <span class="wraning" v-if="error">
-
+    <span class="error-wrapper" v-if="error">
+      <w-icon name="error"></w-icon>
+      <span >{{error}}</span>
     </span>
   </div>  
 </template>
@@ -36,7 +37,7 @@ export default {
   $border-radius:4px;
   $font-size:12px;
   $box-shadow-color:rgba(0,0,0,0.2);
-  
+  $error-color:darkred;
   *{box-sizing: border-box;}
   .input-wrapper{
     font-size:$font-size;display:inline-block;
@@ -47,6 +48,17 @@ export default {
       border-radius: $border-radius;
       padding:0 8px;
       font-size:inherit;
+    }
+    &.error{
+      input{
+        border:1px solid $error-color;box-shadow:inset 0 1px 3px rgba(225,0,0,0.4)
+      }
+      .error-wrapper{
+        margin-left: 4px;
+        vertical-align: middle;
+        color: $error-color;
+        .w-icon{fill:$error-color}
+      }
     }
   }
 </style>
