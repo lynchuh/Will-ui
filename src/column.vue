@@ -45,7 +45,7 @@ export default {
           classArray.push(`col-${str}${classObj.span}`);
         classObj &&
           classObj.offset &&
-          classArray.push(`col-${str}${classObj.offset}`);
+          classArray.push(`offset-${str}${classObj.offset}`);
         return classArray;
       };
       return [
