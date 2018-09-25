@@ -6,7 +6,7 @@
 <script>
 import Button from './button'
 export default {
-  Component:{
+  components:{
     'w-button': Button
   },
   mounted(){
@@ -20,6 +20,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     $border-radius:4px;
+  *{box-sizing: border-box;}
   .w-button-group{
     display:inline-flex;
     vertical-align:middle;

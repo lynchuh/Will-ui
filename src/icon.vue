@@ -1,6 +1,6 @@
 
 <template>
-  <svg class="g-icon" @click="$emit('click')">
+  <svg class="w-icon" @click="$emit('click')">
     <use :xlink:href="`#i-${name}`" ></use>
   </svg>
 </template>
@@ -8,14 +8,15 @@
 import * as svg from './iconSvg.js'
 
 export default {
-  name:'GuluIcon',
+  name:'WillIcon',
   props:{
     name:{}
   }
 }
 </script>
 <style lang="scss" scoped>
-  .g-icon{
+  *{box-sizing: border-box}
+  .w-icon{
     width: 1em;
     height: 1em;
   }

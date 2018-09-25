@@ -50,6 +50,8 @@ $color: #333;
 $border-color: #999;
 $border-color-hover: #666;
 $box-shaodow-color: rgba(0, 0, 0, 0.2);
+
+*{box-sizing: border-box}
 .w-button {
   font-size: $font-size;
   line-height: $font-size;
