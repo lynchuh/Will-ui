@@ -4,7 +4,8 @@
   "description": "基于Vue实现的U库",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/.bin/parcel index.html --no-cache"
   },
   "repository": {
     "type": "git",
@@ -21,9 +22,16 @@
   },
   "homepage": "https://github.com/lynchuh/will-component#readme",
   "dependencies": {
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "vue-hot-reload-api": "^2.3.1"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.9.7"
+    "@vue/component-compiler-utils": "^2.2.0",
+    "node-sass": "^4.9.3",
+    "parcel-bundler": "^1.9.7",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
   }
 }
