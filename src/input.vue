@@ -1,6 +1,6 @@
 <template>
   <div class="input-wrapper" :class="{error}">
-    <input type="text" :value=value :placeholder="placeholder">
+    <input type="text" :value=value :placeholder="placeholder" :disabled="disabled" :readonly="readonly">
     <span class="error-wrapper" v-if="error">
       <w-icon name="error"></w-icon>
       <span >{{error}}</span>
@@ -24,6 +24,12 @@ export default {
     error:{
       type:[String,Boolean],
       default:false
+    },
+    disabled:{
+      type:Boolean
+    },
+    readonly:{
+      type:Boolean
     }
 
   },
@@ -48,6 +54,11 @@ export default {
       border-radius: $border-radius;
       padding:0 8px;
       font-size:inherit;
+      &:hover{border:1px solid $border-color-hover;}
+      &:focus{outline: none;box-shadow:inset 0 1px 3px $box-shadow-color;}
+      &[disabled],&[readonly]{border-color:#aaa;color:#aaa;}
+      &[disabled]{cursor:not-allowed;}
+      &[readonly]{cursor: default;}
     }
     &.error{
       input{
