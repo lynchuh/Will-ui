@@ -9,7 +9,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .w-col{
+  .w-row{
     border:1px solid red;
+    display: flex;
   }
 </style>
