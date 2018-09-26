@@ -23,8 +23,14 @@ import TabsPane from './tabs-pane'
 
 import Popover from './popover'
 
+import Collapse from './collapse'
+import CollapseItem from './collapse-item'
 
 
+
+
+Vue.component('w-collapse',Collapse)
+Vue.component('w-collapse-item',CollapseItem)
 
 Vue.component('w-popover',Popover)
 
@@ -66,7 +72,9 @@ new Vue({
   el:'#app',
   data:{
     loading1:false,
-    message:''
+    message:'',
+    selectedArray:[1,3],
+    selectedItem:1
   },
   methods:{
     changeValue(e){

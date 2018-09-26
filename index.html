@@ -68,52 +68,53 @@
   <w-button @click="showdowntoast">下</w-button>
 </div>
 <div>
-    <w-popover style="display:inline-block" position="top"
-    >
+    <div style="margin-top:40px">
+    <w-popover  position="top">
       <div slot="content" slot-scope="{close}">
         这是popover内容
         <w-button @click="close">关闭</w-button>
       </div>
       <w-button class="button">向上</w-button>
     </w-popover>
-    <w-popover style="display:inline-block" position="bottom">
+    <w-popover  position="bottom">
       <div slot="content">
         这是popover内容
       </div>
       <w-button class="button">向下</w-button>
     </w-popover>
-    <w-popover style="display:inline-block" position="left">
-      <div slot="content" style="height: 200px;">
+    <w-popover position="left">
+      <div slot="content" >
         这是popover内容
       </div>
       <w-button class="button">向左</w-button>
     </w-popover>
-    <w-popover style="display:inline-block" position="right">
+    <w-popover position="right">
       <div slot="content">
         这是popover内容
       </div>
       <w-button class="button">向右</w-button>
     </w-popover>
+    </div>
     <div style="margin-top:40px">
-      <w-popover style="display:inline-block" position="top" trigger="hover">
+      <w-popover  position="top" trigger="hover">
         <div slot="content">
           这是popover内容
         </div>
         <w-button class="button">向上</w-button>
       </w-popover>
-      <w-popover style="display:inline-block" position="bottom" trigger="hover">
+      <w-popover  position="bottom" trigger="hover">
         <div slot="content">
           这是popover内容
         </div>
         <w-button class="button">向下</w-button>
       </w-popover>
-      <w-popover style="display:inline-block" position="left" trigger="hover">
+      <w-popover position="left" trigger="hover">
         <div slot="content">
           这是popover内容
         </div>
         <w-button class="button">向左</w-button>
       </w-popover>
-      <w-popover style="display:inline-block" position="right" trigger="hover">
+      <w-popover position="right" trigger="hover">
         <div slot="content">
           这是popover内容
         </div>
@@ -122,8 +123,6 @@
 
     </div>
 
-
-    <!-- <div class="test" style="height:62px;width:100%;"></div> -->
     <w-tabs selected="1" direction="vertical" style="margin-top:20px;">
       <w-tabs-head>
         <w-tabs-item  label="1">美女</w-tabs-item>
@@ -137,7 +136,29 @@
       </w-tabs-body>
     </w-tabs>
 
-
+    <w-collapse 
+    :selected-array.sync="selectedArray" 
+    :selected.sync="selectedItem"
+    single
+    >
+      <w-collapse-item title="标题一" :index="1">
+        <div>
+          内容一
+        </div>
+      </w-collapse-item>
+      <w-collapse-item title="标题二" index=2>
+          <div>
+            内容二
+          </div>
+        </w-collapse-item>
+        <w-collapse-item title="标题三" index=3>
+            <div>
+              内容三
+            </div>
+          </w-collapse-item>
+          {{selectedArray}}
+          {{selectedItem}}
+    </w-collapse>
 
 
   </div>
