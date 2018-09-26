@@ -1,13 +1,13 @@
 <template>
   <div class="w-footer">
     <slot></slot>
-  </div>  
+  </div>
 </template>
-<script>
+<script >
 export default {
-  name:'WillFooter',  
+  name:"WillFooter"
+  
 }
 </script>
 <style lang="scss" scoped>
-
 </style>

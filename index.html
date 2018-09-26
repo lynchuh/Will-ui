@@ -35,12 +35,31 @@
     <span>{{message}}</span>
     <button @click="changeMessage">点我改变</button> -->
 
-    <w-row>
+    <!-- <w-row>
       <w-col span="5"></w-col>
       <w-col offset="1"></w-col>
       <w-col :ipad="{offset:8,span:2}"></w-col>
       <w-col></w-col>
-    </w-row>
+    </w-row> -->
+
+    <w-layout>
+      <w-header></w-header>
+      <w-layout>
+        <w-sider></w-sider>
+        <w-content></w-content>
+      </w-layout>
+      <w-footer></w-footer>
+    </w-layout>
+
+    <w-layout>
+      <w-sider></w-sider>
+      <w-layout>
+        <w-header></w-header>
+        <w-content></w-content>
+      </w-layout>
+    </w-layout>
+
+
 
 
   </div>

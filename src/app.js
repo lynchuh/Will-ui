@@ -7,7 +7,19 @@ import Input from './input'
 import Row from './row'
 import Column from './column'
 
+import Layout from './layout'
+import Header from './header'
+import Content from './content'
+import Sider from './sider'
+import Footer from './footer'
 
+
+
+Vue.component('w-layout',Layout)
+Vue.component('w-header',Header)
+Vue.component('w-content',Content)
+Vue.component('w-sider',Sider)
+Vue.component('w-footer',Footer)
 
 Vue.component('w-col',Column)
 Vue.component('w-row',Row)

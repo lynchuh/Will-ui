@@ -1,11 +1,11 @@
 <template>
   <div class="w-header">
     <slot></slot>
-  </div>  
+  </div>
 </template>
-<script>
+<script >
 export default {
-  name:'WillHeader',  
+  name:"WillHeader"
 }
 </script>
 <style lang="scss" scoped>
