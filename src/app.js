@@ -21,10 +21,12 @@ import TabsBody from './tabs-body'
 import TabsItem from './tabs-item'
 import TabsPane from './tabs-pane'
 
+import Popover from './popover'
 
 
 
 
+Vue.component('w-popover',Popover)
 
 Vue.component('w-tabs',Tabs)
 Vue.component('w-tabs-head',TabsHead)

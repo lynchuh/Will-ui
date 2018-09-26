@@ -59,9 +59,69 @@
       </w-layout>
     </w-layout> -->
 
-    <w-button @click="showtoptoast">上</w-button>
-    <w-button @click="showmiddletoast">中</w-button>
-    <w-button @click="showdowntoast">下</w-button>
+
+
+<div>
+
+  <w-button @click="showtoptoast">上</w-button>
+  <w-button @click="showmiddletoast">中</w-button>
+  <w-button @click="showdowntoast">下</w-button>
+</div>
+<div>
+    <w-popover style="display:inline-block" position="top"
+    >
+      <div slot="content" slot-scope="{close}">
+        这是popover内容
+        <w-button @click="close">关闭</w-button>
+      </div>
+      <w-button class="button">向上</w-button>
+    </w-popover>
+    <w-popover style="display:inline-block" position="bottom">
+      <div slot="content">
+        这是popover内容
+      </div>
+      <w-button class="button">向下</w-button>
+    </w-popover>
+    <w-popover style="display:inline-block" position="left">
+      <div slot="content" style="height: 200px;">
+        这是popover内容
+      </div>
+      <w-button class="button">向左</w-button>
+    </w-popover>
+    <w-popover style="display:inline-block" position="right">
+      <div slot="content">
+        这是popover内容
+      </div>
+      <w-button class="button">向右</w-button>
+    </w-popover>
+    <div style="margin-top:40px">
+      <w-popover style="display:inline-block" position="top" trigger="hover">
+        <div slot="content">
+          这是popover内容
+        </div>
+        <w-button class="button">向上</w-button>
+      </w-popover>
+      <w-popover style="display:inline-block" position="bottom" trigger="hover">
+        <div slot="content">
+          这是popover内容
+        </div>
+        <w-button class="button">向下</w-button>
+      </w-popover>
+      <w-popover style="display:inline-block" position="left" trigger="hover">
+        <div slot="content">
+          这是popover内容
+        </div>
+        <w-button class="button">向左</w-button>
+      </w-popover>
+      <w-popover style="display:inline-block" position="right" trigger="hover">
+        <div slot="content">
+          这是popover内容
+        </div>
+        <w-button class="button">向右</w-button>
+      </w-popover>
+
+    </div>
+
 
     <!-- <div class="test" style="height:62px;width:100%;"></div> -->
     <w-tabs selected="1" direction="vertical" style="margin-top:20px;">
@@ -76,6 +136,7 @@
         <w-tabs-pane name="3">体育相关资讯</w-tabs-pane>
       </w-tabs-body>
     </w-tabs>
+
 
 
 
