@@ -55,9 +55,6 @@ export default {
             if (tabItem.label === this.selectedTab){
               let {width, height} = tabItem.$el.getBoundingClientRect()
               position = {left:tabItem.$el.offsetLeft,top:tabItem.$el.offsetTop,width,height};
-              console.log(position)
-              // console.log('offsetTop',tabItem.$el.offsetTop)
-              // console.log('offsetLeft',tabItem.$el.offsetLeft)
             }
           });
       });
