@@ -32,7 +32,7 @@ export default {
   inject: ["eventBus"],
   methods: {
     toggleStatus() {
-      const { single } = this.$parent.single ? this.$parent : { single:false }
+      const { single } = this.$parent && this.$parent.single ? this.$parent : { single:false }
       const openArray = JSON.parse(JSON.stringify(this.openArray));
       switch (single) {
         case true:
@@ -59,7 +59,7 @@ export default {
     }
   },
   mounted() {
-    const { single } = this.$parent.single ? this.$parent : { single:false }
+    const { single } = this.$parent && this.$parent.single ? this.$parent : { single:false }
     switch (single) {
       case true:
         this.eventBus && this.eventBus.$on("update:openSingleItem", activeIndex => {
