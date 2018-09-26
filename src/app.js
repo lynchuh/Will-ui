@@ -12,7 +12,12 @@ import Header from './header'
 import Content from './content'
 import Sider from './sider'
 import Footer from './footer'
+import Toast from './toast'
+import Toastplugin from './toastPlugin'
 
+
+Vue.component('w-toast',Toast)
+Vue.use(Toastplugin)
 
 
 Vue.component('w-layout',Layout)
@@ -20,6 +25,7 @@ Vue.component('w-header',Header)
 Vue.component('w-content',Content)
 Vue.component('w-sider',Sider)
 Vue.component('w-footer',Footer)
+
 
 Vue.component('w-col',Column)
 Vue.component('w-row',Row)
@@ -40,6 +46,28 @@ new Vue({
     },
     changeMessage(){
       this.message="??"
+    },
+    showToast(position,autoClose){
+      const propsData={
+        position:position,
+        autoClose:autoClose,
+        closeButton:{
+          text:'我知道了',
+          callback: ()=>{
+            console.log('用户知道了')
+          }
+        }
+      }
+      this.$toast(`你的智商目前为${parseInt(Math.random()*100)}`,propsData)
+    },
+    showtoptoast(){
+      this.showToast('top',2)
+    },
+    showmiddletoast(){
+      this.showToast('middle',false)
+    },
+    showdowntoast(){
+      this.showToast('bottom',8)
     }
   }
 })
