@@ -32,21 +32,24 @@ export default {
   },
   methods: {
     changeSelected() {
-      this.itemPosition = this.$el.getBoundingClientRect();
-      this.eventBus && this.eventBus.$emit("update:selected", this.label, this.itemPosition);
+      let {width,height}= this.$el.getBoundingClientRect()
+      this.itemPosition = {left:this.$el.offsetLeft,top:this.$el.offsetTop,width,height}
+      this.eventBus &&
+        this.eventBus.$emit("update:selected", this.label, this.itemPosition);
     },
     onClick() {
       if (!!this.disabled) {
-        return
+        return;
       }
       this.changeSelected();
-      this.$emit('click',this)
+      this.$emit("click", this);
     }
   },
   created() {
-    this.eventBus && this.eventBus.$on("update:selected", (itemName, itemPosition) => {
-      this.active = itemName === this.label ? true : false;
-    });
+    this.eventBus &&
+      this.eventBus.$on("update:selected", (itemName, itemPosition) => {
+        this.active = itemName === this.label ? true : false;
+      });
   },
   mounted() {},
   computed: {
@@ -68,6 +71,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
   .icon {
     margin-right: 0.3em;
   }

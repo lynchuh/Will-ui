@@ -63,17 +63,17 @@
     <w-button @click="showmiddletoast">中</w-button>
     <w-button @click="showdowntoast">下</w-button>
 
-
-    <w-tabs selected="1">
+    <!-- <div class="test" style="height:62px;width:100%;"></div> -->
+    <w-tabs selected="1" direction="vertical" style="margin-top:20px;">
       <w-tabs-head>
         <w-tabs-item  label="1">美女</w-tabs-item>
         <w-tabs-item label="2">金融</w-tabs-item>
         <w-tabs-item label="3">体育</w-tabs-item>
       </w-tabs-head>
       <w-tabs-body>
-        <w-tabs-pane label-content="1">美女相关资讯</w-tabs-pane>
-        <w-tabs-pane label-content="2">金融相关资讯</w-tabs-pane>
-        <w-tabs-pane label-content="3">体育相关资讯</w-tabs-pane>
+        <w-tabs-pane name="1">美女相关资讯</w-tabs-pane>
+        <w-tabs-pane name="2">金融相关资讯</w-tabs-pane>
+        <w-tabs-pane name="3">体育相关资讯</w-tabs-pane>
       </w-tabs-body>
     </w-tabs>
 

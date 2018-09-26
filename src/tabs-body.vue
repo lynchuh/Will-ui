@@ -11,5 +11,8 @@ export default {
 <style lang="scss" scoped>
   .w-tabs-body{
     flex:1;
+    box-sizing: border-box;
+    *{box-sizing: border-box;}
   }
 </style>
+

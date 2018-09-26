@@ -52,18 +52,16 @@ export default {
       this.$children.forEach(children => {
         children.$options.name === "WillTabsHead" &&
           children.$children.forEach(tabItem => {
-            if (tabItem.label === this.selectedTab)
-              position = tabItem.$el.getBoundingClientRect();
+            if (tabItem.label === this.selectedTab){
+              let {width, height} = tabItem.$el.getBoundingClientRect()
+              position = {left:tabItem.$el.offsetLeft,top:tabItem.$el.offsetTop,width,height};
+              console.log(position)
+              // console.log('offsetTop',tabItem.$el.offsetTop)
+              // console.log('offsetLeft',tabItem.$el.offsetLeft)
+            }
           });
       });
       return position;
-    },
-    emitEventBus() {
-      this.eventBus && this.eventBus.$emit(
-        "update:selected",
-        this.selected,
-        this.getTabPosition()
-      );
     },
     checkChildren() {
       let checkKey = {
@@ -98,7 +96,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .w-tabs {
+  box-sizing: border-box;
   display: flex;
+  *{box-sizing: border-box;}
   &.horizontal {
     flex-direction: column;
   }

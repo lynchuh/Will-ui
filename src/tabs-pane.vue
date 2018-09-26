@@ -26,4 +26,10 @@ export default {
   computed: {}
 };
 </script>
+<style lang="scss" scoped>
+.w-tabs-pane{
+  box-sizing: border-box;
+  *{box-sizing: border-box;}
+}
+</style>
 

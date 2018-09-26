@@ -22,15 +22,15 @@ export default {
         classitem === "vertical" || classitem === "horizontal" ? classitem : "";
     });
     this.eventBus && this.eventBus.$on("update:selected", (itemName, itemPosition) => {
-      let { width, height, left, top, y, x } = itemPosition;
+      let { width, height, left, top } = itemPosition;
       switch (this.position) {
         case "vertical":
           this.$refs.line.style.height = `${height}px`;
-          this.$refs.line.style.marginTop = `${top - x}px`;
+          this.$refs.line.style.marginTop = `${top}px`;
           break;
         case "horizontal":
           this.$refs.line.style.width = `${width}px`;
-          this.$refs.line.style.marginLeft = `${left - y}px`;
+          this.$refs.line.style.marginLeft = `${left}px`;
           break;
       }
     });
@@ -50,12 +50,14 @@ $tab-size: 14px;
 $active-color: #409ee1;
 $line-height: 2px;
 .w-tabs-head {
+  box-sizing: border-box;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   position: relative;
   font-size: 14px;
   cursor: pointer;
+  *{box-sizing: border-box;}
   .line {
     background: $active-color;
     position: absolute;
