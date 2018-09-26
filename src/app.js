@@ -15,6 +15,32 @@ import Footer from './footer'
 import Toast from './toast'
 import Toastplugin from './toastPlugin'
 
+import Tabs from './tabs'
+import TabsHead from './tabs-head'
+import TabsBody from './tabs-body'
+import TabsItem from './tabs-item'
+import TabsPane from './tabs-pane'
+
+
+
+
+
+
+Vue.component('w-tabs',Tabs)
+Vue.component('w-tabs-head',TabsHead)
+Vue.component('w-tabs-body',TabsBody)
+Vue.component('w-tabs-item',TabsItem)
+Vue.component('w-tabs-pane',TabsPane)
+
+
+
+
+
+
+
+
+
+
 
 Vue.component('w-toast',Toast)
 Vue.use(Toastplugin)
