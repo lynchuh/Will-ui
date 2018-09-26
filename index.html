@@ -10,30 +10,138 @@
 
 <body>
   <div id="app">
-    <!-- <w-button icon="setting" icon-position="left">按钮</w-button>
-    <w-button icon-position="right" icon="up">向上</w-button>
-    <w-button icon="down">向下</w-button>
-    <w-button icon="loading">加载</w-button>
-    <w-button icon="setting" :loading="loading1" @click="loading1 = !loading1">设置</w-button>
-    <w-button icon="left">向左</w-button>
-    <w-button icon="right" icon-position="right">向右</w-button>
-    <w-icon name="loading"></w-icon>
-    <w-icon name="error"></w-icon>
-    <w-button-group>
-      <w-button icon="left">上一页</w-button>
-      <w-button>更多</w-button>
-      <w-button icon="right" icon-position="right">下一页</w-button>
-    </w-button-group> -->
+    <div style="margin:20px 10px">
+      <div>button组件</div>
+      <div>
+        <w-button icon="setting" icon-position="left">按钮</w-button>
+        <w-button icon-position="right" icon="up">向上</w-button>
+        <w-button icon="down">向下</w-button>
+        <w-button icon="loading">加载</w-button>
+        <w-button icon="setting" :loading="loading1" @click="loading1 = !loading1">设置</w-button>
+        <w-button icon="left">向左</w-button>
+        <w-button icon="right" icon-position="right">向右</w-button>
+        <w-icon name="loading"></w-icon>
+        <w-icon name="error"></w-icon>
+        <w-button-group>
+          <w-button icon="left">上一页</w-button>
+          <w-button>更多</w-button>
+          <w-button icon="right" icon-position="right">下一页</w-button>
+        </w-button-group>
+      </div>
+    </div>
+    <div style="margin:20px 10px">
+      <div>input 组件</div>
+      <div>
+        <w-input value="设置默认value值"></w-input>
+        <w-input placeholder="设置placeholder"></w-input>
+        <w-input placeholder="错误提示显示" error="我是错误"></w-input>
+        <w-input placeholder="这是disabled状态" disabled></w-input>
+        <w-input placeholder="这是readonly状态" readonly></w-input>
+        <w-input placeholder="支持事件触发" @change="changeValue"></w-input>
+        <w-input placeholder="双向绑定value值" v-model="message"></w-input>
+        <span>{{message}}</span>
+        <button @click="changeMessage">点我改变</button>
+      </div>
+    </div>
+    <div style="margin:20px 10px">
+      <div>popover 组件</div>
+      <div style="margin:20px 10px">
+        <w-popover position="top">
+          <div slot="content" slot-scope="{close}">
+            这是popover内容
+            <w-button @click="close">关闭</w-button>
+          </div>
+          <w-button class="button">向上</w-button>
+        </w-popover>
+        <w-popover position="bottom">
+          <div slot="content">
+            这是popover内容
+          </div>
+          <w-button class="button">向下</w-button>
+        </w-popover>
+        <w-popover position="left">
+          <div slot="content">
+            这是popover内容
+          </div>
+          <w-button class="button">向左</w-button>
+        </w-popover>
+        <w-popover position="right">
+          <div slot="content">
+            这是popover内容
+          </div>
+          <w-button class="button">向右</w-button>
+        </w-popover>
+      </div>
+      <div style="margin:20px 10px">
+        <w-popover position="top" trigger="hover">
+          <div slot="content">
+            这是popover内容
+          </div>
+          <w-button class="button">向上</w-button>
+        </w-popover>
+        <w-popover position="bottom" trigger="hover">
+          <div slot="content">
+            这是popover内容
+          </div>
+          <w-button class="button">向下</w-button>
+        </w-popover>
+        <w-popover position="left" trigger="hover">
+          <div slot="content">
+            这是popover内容
+          </div>
+          <w-button class="button">向左</w-button>
+        </w-popover>
+        <w-popover position="right" trigger="hover">
+          <div slot="content">
+            这是popover内容
+          </div>
+          <w-button class="button">向右</w-button>
+        </w-popover>
+      </div>
+    </div>
+    <div style="margin:20px 10px">
+      <div>tabs 组件</div>
+      <div>
+        <w-tabs selected="1" direction="vertical" style="margin-top:20px;">
+          <w-tabs-head>
+            <w-tabs-item label="1">美女</w-tabs-item>
+            <w-tabs-item label="2">金融</w-tabs-item>
+            <w-tabs-item label="3">体育</w-tabs-item>
+          </w-tabs-head>
+          <w-tabs-body>
+            <w-tabs-pane name="1">美女相关资讯</w-tabs-pane>
+            <w-tabs-pane name="2">金融相关资讯</w-tabs-pane>
+            <w-tabs-pane name="3">体育相关资讯</w-tabs-pane>
+          </w-tabs-body>
+        </w-tabs>
+      </div>
+    </div>
 
-    <!-- <w-input value="设置默认value值"></w-input>
-    <w-input placeholder="设置placeholder"></w-input>
-    <w-input placeholder="错误提示显示" error="我是错误"></w-input>
-    <w-input placeholder="这是disabled状态" disabled></w-input>
-    <w-input placeholder="这是readonly状态" readonly></w-input>
-    <w-input placeholder="支持事件触发" @change="changeValue"></w-input>
-    <w-input placeholder="双向绑定value值" v-model="message"></w-input>
-    <span>{{message}}</span>
-    <button @click="changeMessage">点我改变</button> -->
+    <div style="margin:20px 10px">
+      <div>collapse组件</div>
+      <div>
+        <w-collapse :selected-array.sync="selectedArray" :selected.sync="selectedItem" single>
+          <w-collapse-item title="标题一" :index="1">
+            <div>
+              内容一
+            </div>
+          </w-collapse-item>
+          <w-collapse-item title="标题二" index=2>
+            <div>
+              内容二
+            </div>
+          </w-collapse-item>
+          <w-collapse-item title="标题三" index=3>
+            <div>
+              内容三
+            </div>
+          </w-collapse-item>
+          {{selectedArray}}
+          {{selectedItem}}
+        </w-collapse>
+      </div>
+    </div>
+
 
     <!-- <w-row>
       <w-col span="5"></w-col>
@@ -60,105 +168,7 @@
     </w-layout> -->
 
 
-
-<div>
-
-  <w-button @click="showtoptoast">上</w-button>
-  <w-button @click="showmiddletoast">中</w-button>
-  <w-button @click="showdowntoast">下</w-button>
-</div>
-<div>
-    <div style="margin-top:40px">
-    <w-popover  position="top">
-      <div slot="content" slot-scope="{close}">
-        这是popover内容
-        <w-button @click="close">关闭</w-button>
-      </div>
-      <w-button class="button">向上</w-button>
-    </w-popover>
-    <w-popover  position="bottom">
-      <div slot="content">
-        这是popover内容
-      </div>
-      <w-button class="button">向下</w-button>
-    </w-popover>
-    <w-popover position="left">
-      <div slot="content" >
-        这是popover内容
-      </div>
-      <w-button class="button">向左</w-button>
-    </w-popover>
-    <w-popover position="right">
-      <div slot="content">
-        这是popover内容
-      </div>
-      <w-button class="button">向右</w-button>
-    </w-popover>
-    </div>
-    <div style="margin-top:40px">
-      <w-popover  position="top" trigger="hover">
-        <div slot="content">
-          这是popover内容
-        </div>
-        <w-button class="button">向上</w-button>
-      </w-popover>
-      <w-popover  position="bottom" trigger="hover">
-        <div slot="content">
-          这是popover内容
-        </div>
-        <w-button class="button">向下</w-button>
-      </w-popover>
-      <w-popover position="left" trigger="hover">
-        <div slot="content">
-          这是popover内容
-        </div>
-        <w-button class="button">向左</w-button>
-      </w-popover>
-      <w-popover position="right" trigger="hover">
-        <div slot="content">
-          这是popover内容
-        </div>
-        <w-button class="button">向右</w-button>
-      </w-popover>
-
-    </div>
-
-    <w-tabs selected="1" direction="vertical" style="margin-top:20px;">
-      <w-tabs-head>
-        <w-tabs-item  label="1">美女</w-tabs-item>
-        <w-tabs-item label="2">金融</w-tabs-item>
-        <w-tabs-item label="3">体育</w-tabs-item>
-      </w-tabs-head>
-      <w-tabs-body>
-        <w-tabs-pane name="1">美女相关资讯</w-tabs-pane>
-        <w-tabs-pane name="2">金融相关资讯</w-tabs-pane>
-        <w-tabs-pane name="3">体育相关资讯</w-tabs-pane>
-      </w-tabs-body>
-    </w-tabs>
-
-    <w-collapse 
-    :selected-array.sync="selectedArray" 
-    :selected.sync="selectedItem"
-    single
-    >
-      <w-collapse-item title="标题一" :index="1">
-        <div>
-          内容一
-        </div>
-      </w-collapse-item>
-      <w-collapse-item title="标题二" index=2>
-          <div>
-            内容二
-          </div>
-        </w-collapse-item>
-        <w-collapse-item title="标题三" index=3>
-            <div>
-              内容三
-            </div>
-          </w-collapse-item>
-          {{selectedArray}}
-          {{selectedItem}}
-    </w-collapse>
+     
 
 
   </div>
