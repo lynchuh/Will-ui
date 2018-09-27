@@ -2,10 +2,11 @@
 :beginner: 通过鼠标或键盘输入内容，是最基础的表单域的包装。
 
 ## 示例 :chestnut:
+<ClientOnly>
+  <input-demo></input-demo>
+</ClientOnly>
 
-<input-demo></input-demo>
-
-## Attribute - 属性
+## Attribute - 属性 :stars:
 
   - 输入框的属性说明如下：
   

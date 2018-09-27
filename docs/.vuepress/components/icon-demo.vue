@@ -14,7 +14,6 @@
       <li><w-icon name="right" class="icon"></w-icon><span>right</span></li>
       <li><w-icon name="up" class="icon"></w-icon><span>up</span></li>
       <li><w-icon name="down" class="icon"></w-icon><span>down</span></li>
-      <li><w-icon name="up" class="icon"></w-icon><span>up</span></li>
       <li><w-icon name="thumbs-up" class="icon"></w-icon><span>thumbs-up</span></li>
       <li><w-icon name="download" class="icon"></w-icon><span>download</span></li>
     </ol>
