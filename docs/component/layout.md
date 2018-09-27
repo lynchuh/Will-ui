@@ -1,6 +1,6 @@
 # Layout - 布局
 
-  用于进行页面级整体布局的容器组件，快速搭建页面的基本结构。
+  :beginner: 用于进行页面级整体布局的容器组件，快速搭建页面的基本结构。
 
 ## 组件概述
   - `<w-layout>` : 布局容器，可嵌套`<w-header>`，`<w-sider>`，`<w-content>`，`<w-footer>`或`<w-layout>`本身，可以放在任何父容器中。
@@ -16,6 +16,15 @@
 </ClientOnly>
 
 ## Sider Attribute  :stars:
+
+  - 侧边栏 sider 的属性说明如下：
+
   | 参数 | 说明 | 类型 | 可选值 | 默认值 |
   | ---- |:----:|:----:|:----:|:----:|
   | needhide | 侧边栏是否可隐藏 | Boolean |     | false |
+
+ - 使用 needhide属性隐藏侧边栏
+
+  <ClientOnly>
+  <layout-demo-2></layout-demo-2>
+</ClientOnly>

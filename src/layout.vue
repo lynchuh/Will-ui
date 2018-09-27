@@ -39,6 +39,7 @@ export default {
     flex-grow: 1;
     flex-direction:column;
     margin:0;
+    overflow: hidden;
     *{box-sizing: border-box;}
     &.hasSider{
       flex-direction: row;

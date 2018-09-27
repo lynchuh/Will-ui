@@ -8,3 +8,5 @@
 .npmrc
 
 /dist
+
+docs/.vuepress/dist
