@@ -1,5 +1,5 @@
 <template>
-  <button class="w-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')" >
+  <button class="w-button" :class="classes" @click="$emit('click')" >
     <div class="buttonContent"><slot></slot></div>
     <w-icon v-if="icon && !loading" :name="icon " class="icon"></w-icon>
     <w-icon name="loading"  v-if="loading" class="loading icon"></w-icon>
@@ -11,6 +11,11 @@ export default {
   name: "WillButton",
   components: {
     "w-icon": Icon
+  },
+  data(){
+    return{
+      iconOnly:false
+    }
   },
   props: {
     icon: {
@@ -25,6 +30,19 @@ export default {
       default: "left",
       validator(value) {
         return value === "left" || value === "right";
+      }
+    }
+  },
+  mounted(){
+    if(!this.$slots.default){
+      this.iconOnly = true
+    }
+  },
+  computed:{
+    classes(){
+      return{
+        [`icon-${this.iconPosition}`]:true,
+        [`iconOnly`]:this.iconOnly
       }
     }
   }
@@ -75,11 +93,11 @@ $box-shaodow-color: rgba(0, 0, 0, 0.2);
   > .icon {
     height: 1em;
     width: 1em;
-    margin: 0 .3em;
   }
   &.icon-right {
     > .icon {
       order: 2;
+      margin-left: .3em;
     }
     > .buttonContent {
       order: 1;
@@ -88,6 +106,7 @@ $box-shaodow-color: rgba(0, 0, 0, 0.2);
   &.icon-left {
     > .icon {
       order: 1;
+      margin-right: .3em;
     }
     > .buttonContent {
       order: 2;
@@ -95,6 +114,11 @@ $box-shaodow-color: rgba(0, 0, 0, 0.2);
   }
   .loading {
     animation: spin 2s infinite linear;
+  }
+  &.iconOnly{
+    .icon{
+      margin:0
+    }
   }
 }
 </style>

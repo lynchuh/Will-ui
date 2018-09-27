@@ -31,10 +31,12 @@ export default {
       default: false
     },
     disabled: {
-      type: Boolean
+      type: Boolean,
+      default:false
     },
     readonly: {
-      type: Boolean
+      type: Boolean,
+      default:false
     }
   }
 };

@@ -1,5 +1,4 @@
 <template>
-  <div>
     <ol>
       <li><w-icon name="setting" class="icon"></w-icon><span>setting</span></li>
       <li><w-icon name="share" class="icon"></w-icon><span>share</span></li>
@@ -19,8 +18,6 @@
       <li><w-icon name="thumbs-up" class="icon"></w-icon><span>thumbs-up</span></li>
       <li><w-icon name="download" class="icon"></w-icon><span>download</span></li>
     </ol>
-    
-  </div>
 </template>
 <script>
 import Icon from  '../../../src/icon'
@@ -34,6 +31,9 @@ export default {
 ol{
   display: flex;
   flex-wrap: wrap;
+  box-shadow: 0 0 46px 0px rgba(0, 0, 0, 0.1);
+  border-radius:8px;
+  margin:18px 0;
   li{
     display: inline-flex;
     justify-content: center;

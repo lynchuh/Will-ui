@@ -10,7 +10,7 @@
       <pre><code>{{basicbutton}}</code></pre>
     </div>
     <h3>图标按钮</h3>
-    <p>带图标的无文字按钮可节省空间。</p>
+    <p>带图标的无文字按钮，可节省空间。</p>
     <div class="iconButton">
       <w-button icon="setting"></w-button>
       <w-button icon="info"></w-button>
@@ -61,14 +61,15 @@ export default {
 <w-button icon="setting">设置</w-button>
 <w-button :loading="true">加载中</w-button>
 <w-button icon="info" @click="loading=!loading" :loading="loading">点击加载</w-button>
-/**script**/
-export default{
-  data(){
-    return {
-      loading:false
+<script>
+  export default{
+    data(){
+      return {
+        loading:false
+      }
     }
   }
-}`,
+< /script>`,
       groupButton: `<w-button-group class="groupItem">
   <w-button icon="left">上一页</w-button>
   <w-button icon="right" icon-position="right">下一页</w-button>
@@ -87,12 +88,15 @@ export default{
 <w-button icon="wechat"></w-button>
 <w-button icon="setting" :loading="loading" @click="loading = !loading"></w-button>
 
-export default{
-  data(){
-    return {
-      loading:false
+<script>
+  export default{
+    data(){
+      return {
+        loading:false
+      }
     }
-  }`
+  }
+< /script>`
     };
   }
 };
