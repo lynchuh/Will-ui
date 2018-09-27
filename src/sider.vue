@@ -27,9 +27,13 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+
   .w-sider{
+    display: flex;
+    box-sizing: border-box;
     position:relative;
     width:100px;
+    *{box-sizing: border-box;}
     > .siderBtn{
       position:absolute;
       right:10px;

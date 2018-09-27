@@ -4,18 +4,18 @@
   </div>
 </template>
 <script >
-// import Header from './header'
-// import Footer from './footer'
-// import Sider from './sider'
-// import Content from './content'
+import Header from './header'
+import Footer from './footer'
+import Sider from './sider'
+import Content from './content'
 export default {
   name:'WillLayout',
-  // components:{
-  //   'w-header':Header,
-  //   'w-footer':Footer,
-  //   'w-sider':Sider,
-  //   'w-content':Content
-  // },
+  components:{
+    'w-header':Header,
+    'w-footer':Footer,
+    'w-sider':Sider,
+    'w-content':Content
+  },
   data(){
     return{
       layoutClass:{
@@ -34,10 +34,12 @@ export default {
 </script>
 <style lang="scss" scoped>
   .w-layout{
+    box-sizing: border-box;
     display:flex;
     flex-grow: 1;
     flex-direction:column;
     margin:0;
+    *{box-sizing: border-box;}
     &.hasSider{
       flex-direction: row;
     }
