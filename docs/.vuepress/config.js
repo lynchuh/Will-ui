@@ -3,7 +3,7 @@ module.exports = {
   description: '一个基于Vue 2.x 的前端UI组件库',
   base:'/Will/',
   head: [
-    ['link', { rel: 'icon', href: './logo.png' }]
+    ['link', { rel: 'icon', href: '/logo.png' }]
   ],
   themeConfig: {
     nav: [

@@ -35,6 +35,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .row-wrapper{
+  box-sizing: border-box;
+  *{box-sizing: border-box;}
   overflow: hidden;
   .w-row{
     margin: 0;

@@ -16,5 +16,4 @@
   | placeholder | 输入框占位符 | String |  |  |
   | error | 显示输入框错误状态 | String / Boolean |     | false |
   | disabled | 表示禁用状态 | Boolean |     | false |
-  | disabled | 表示只读状态 | Boolean |     | false |
-
+  | readonly | 表示只读状态 | Boolean |     | false |

@@ -87,10 +87,12 @@ $class-wide-pc-width-prefix: "col-wide-pc-";
 $class-wide-pc-offset-prefix: "offset-wide-pc-";
 
 .w-col {
+  box-sizing: border-box;
   min-height: 30px;
   display: flex;
   flex-direction: column;
   transition: all 0.3s;
+  *{box-sizing: border-box;flex:1;width:100%;}
   @for $n from 1 through 24 {
     &.#{$class-width-prefix}#{$n} {
       width: ($n/24) * 100%;
@@ -167,5 +169,3 @@ $class-wide-pc-offset-prefix: "offset-wide-pc-";
   }
 }
 </style>
-
-
