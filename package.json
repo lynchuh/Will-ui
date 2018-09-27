@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/lynchuh/will-component#readme",
   "dependencies": {
+    "eslint": "^5.6.0",
     "vue": "^2.5.17",
     "vue-hot-reload-api": "^2.3.1"
   },

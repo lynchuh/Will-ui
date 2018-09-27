@@ -97,8 +97,9 @@ new Vue({
       }
       this.$toast(`你的智商目前为${parseInt(Math.random()*100)}`,propsData)
     },
-    showtoptoast(){
-      this.showToast('top',2)
+    showToptoast(){
+      // this.showToast('top',2)
+      this.$toast('hello')
     },
     showmiddletoast(){
       this.showToast('middle',false)

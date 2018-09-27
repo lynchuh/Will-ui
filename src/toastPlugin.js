@@ -20,6 +20,7 @@ function createToast({
   propsData,
   onClose
 }) {
+  
   const Constructor = Vue.extend(Toast)
   const toast = new Constructor({
     propsData
