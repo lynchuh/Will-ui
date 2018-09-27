@@ -1,10 +1,8 @@
 <template>
   <button class="w-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')" >
-    <div class="buttonContent">
-      <slot></slot>
-    </div>
-      <w-icon v-if="icon && !loading" :name="icon " class="icon"></w-icon>
-      <w-icon name="loading"  v-if="loading" class="loading icon"></w-icon>
+    <div class="buttonContent"><slot></slot></div>
+    <w-icon v-if="icon && !loading" :name="icon " class="icon"></w-icon>
+    <w-icon name="loading"  v-if="loading" class="loading icon"></w-icon>
   </button>
 </template>
 <script>
@@ -77,12 +75,11 @@ $box-shaodow-color: rgba(0, 0, 0, 0.2);
   > .icon {
     height: 1em;
     width: 1em;
+    margin: 0 .3em;
   }
   &.icon-right {
     > .icon {
       order: 2;
-      margin: 0;
-      margin-left: 0.3em;
     }
     > .buttonContent {
       order: 1;
@@ -91,8 +88,6 @@ $box-shaodow-color: rgba(0, 0, 0, 0.2);
   &.icon-left {
     > .icon {
       order: 1;
-      margin: 0;
-      margin-right: 0.3em;
     }
     > .buttonContent {
       order: 2;

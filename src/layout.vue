@@ -4,18 +4,18 @@
   </div>
 </template>
 <script >
-import Header from './header'
-import Footer from './footer'
-import Sider from './sider'
-import Content from './content'
+// import Header from './header'
+// import Footer from './footer'
+// import Sider from './sider'
+// import Content from './content'
 export default {
   name:'WillLayout',
-  components:{
-    'w-header':Header,
-    'w-footer':Footer,
-    'w-sider':Sider,
-    'w-content':Content
-  },
+  // components:{
+  //   'w-header':Header,
+  //   'w-footer':Footer,
+  //   'w-sider':Sider,
+  //   'w-content':Content
+  // },
   data(){
     return{
       layoutClass:{

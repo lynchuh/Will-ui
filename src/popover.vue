@@ -138,6 +138,7 @@ $popover-background: white;
 .w-popover {
   display: inline-block;
   position: relative;
+  vertical-align: middle;
   .trigger-wrapper {
     display: inline-flex;
     align-items: center;
