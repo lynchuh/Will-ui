@@ -53,7 +53,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .w-collapse {
-  background-color: #eee;
+  border:1px solid #d9d9d9;
+  border-radius: 6px;
 }
 </style>
 

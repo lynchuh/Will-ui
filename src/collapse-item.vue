@@ -86,8 +86,25 @@ $default-font-size: 14px;
   font-size: $default-font-size;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
+  margin-top: -1px;
   &:not(:first-child) {
-    margin-top: -1px;
+    margin-top: -2px;
+  }
+  &:first-child{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    .title-wrapper{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    }
+  }
+  &:last-child{
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    :last-child{
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
   }
   .title-wrapper {
     background: #fafafa;
@@ -100,6 +117,7 @@ $default-font-size: 14px;
     padding: 0.5em 1em;
     color: rgba(0, 0, 0, 0.65);
   }
+
 }
 </style>
 
