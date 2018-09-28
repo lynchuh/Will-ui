@@ -5,7 +5,6 @@
     <div class="demo">
       <w-button @click="$toast(`<strong style='color:red;'>加粗的提示</strong>`,{enableHtml:true,autoClose:false})">支持HTML</w-button>
     </div>
-    <pre><code>{{content}}</code></pre>
   </div>
 </template>
 <script>
@@ -17,26 +16,8 @@ Vue.use(Toastplugin)
 export default {
   components:{
     'w-button':Button,
-  },
-  data(){
-    return{
-      content:`<style>
-  .toast-wrapper{
-    z-index:20
   }
-</style>
-<w-button @click="onClickButton">支持HTML</w-button>
-<script>
-  methods:{
-    onClickButton(){
-      this.$toast("<strong style='color:red;'>加粗的提示</strong>",
-      {enableHtml:true})
-    }
-  }
-< /script>
-`,
-    }
-  }
+
 }
 </script>
 <style lang="scss">

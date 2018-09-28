@@ -1,14 +1,15 @@
 <template>
-  <div>
-    <h3>常见页面布局</h3>
       <div class="demo">
-        <w-layout class="w-layout">
-          <w-header class="w-header">Header</w-header>
-          <w-content class="w-content">Content</w-content>
-          <w-footer class="w-footer">Footer</w-footer>
+        <w-layout>
+            <w-header class="w-header">Header</w-header>
+          <w-layout class="w-layout">
+            <w-sider class="w-sider">Sider</w-sider>
+            <w-content class="w-content">Content</w-content>
+          </w-layout>
+            <w-footer class="w-footer">Footer</w-footer>
         </w-layout>
       </div>
-  </div>
+
 </template>
 <script>
 import Layout from "../../../src/layout";
@@ -24,14 +25,14 @@ export default {
     "w-content": Content,
     "w-sider": Sider,
     "w-footer": Footer
-  },
- 
+  }
 };
 </script>
 <style lang="scss" scoped>
 .header {
   height: 60px;
 }
+
   .demo {
     margin: 16px 0;
   }

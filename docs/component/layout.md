@@ -15,6 +15,59 @@
   <layout-demo-1></layout-demo-1>
 </ClientOnly>
 
+```vue
+<w-layout>
+  <w-header>Header</w-header>
+  <w-content>Content</w-content>
+  <w-footer>Footer</w-footer>
+</w-layout>
+```
+
+<ClientOnly>
+  <layout-demo-2></layout-demo-2>
+</ClientOnly>
+
+```vue
+<w-layout>
+  <w-sider>Sider</w-sider>
+  <w-layout>
+    <w-header>Header</w-header>
+    <w-content>Content</w-content>
+    <w-footer>Footer</w-footer>
+  </w-layout>
+</w-layout>
+```
+
+<ClientOnly>
+  <layout-demo-3></layout-demo-3>
+</ClientOnly>
+
+```vue
+<w-layout>
+  <w-header>Header</w-header>
+<w-layout>
+  <w-sider>Sider</w-sider>
+  <w-content>Content</w-content>
+</w-layout>
+  <w-footer>Footer</w-footer>
+</w-layout>
+```
+
+<ClientOnly>
+  <layout-demo-4></layout-demo-4>
+</ClientOnly>
+
+```vue
+<w-layout>
+  <w-sider needhide >Sider</w-sider>
+  <w-layout>
+    <w-header>Header</w-header>
+    <w-content>Content</w-content>
+    <w-footer>Footer</w-footer>
+  </w-layout>
+</w-layout>
+```
+
 ## Sider Attribute  :stars:
 
   - 侧边栏 sider 的属性说明如下：

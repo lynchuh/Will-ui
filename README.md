@@ -12,10 +12,10 @@ Will-UI是一个基于Vue 2.x的前端UI组件库，它提供了 button、input�
 
     `*{box-sizing:border-box}`
 
-# 安装
+## 安装
 
 
-# 快速上手
+## 快速上手
 
-# 组件介绍
+## 组件介绍
   [点击查看文档](https://lynchuh.github.io/Will/)

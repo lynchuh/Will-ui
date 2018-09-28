@@ -6,7 +6,6 @@
       <w-button @click="$toast('点击右边按钮关闭弹框',{autoClose:false,position:'middle'})">出现关闭按钮</w-button>
       <w-button @click="$toast('十秒之后再关闭弹框',{autoClose:10,position:'middle'})">十秒关闭</w-button>
     </div>
-    <pre><code>{{content}}</code></pre>
   </div>
 </template>
 <script>
@@ -18,18 +17,6 @@ Vue.use(Toastplugin)
 export default {
   components:{
     'w-button':Button
-  },
-  data(){
-    return{
-      content:`<style>
-  .toast-wrapper{
-    z-index:20
-  }
-</style>
-
-<w-button @click="$toast('点击右边按钮关闭弹框',{autoClose:false,position:'middle'})">弹出</w-button>
-<w-button @click="$toast('十秒之后再关闭弹框',{autoClose:10,position:'middle'})">十秒关闭</w-button>`
-    }
   }
 }
 </script>

@@ -1,21 +1,24 @@
 <template>
 <div>
-  <h3>偏移网格</h3>
+  <h3>响应式布局</h3>
   <div class="demo">
     <w-row>
-      <w-col span="4" offset="6">col-4</w-col>
-      <w-col span="10" offset="4">col-10</w-col>
-    </w-row>
-    <w-row>
-      <w-col span="6" >col-6</w-col>
-      <w-col span="8" offset="4">col-8</w-col>
-    </w-row>
-    <w-row>
-      <w-col span="6" offset="3">col-6</w-col>
-      <w-col span="8" offset="7">col-8</w-col>
+      <w-col 
+      offset="5" span="6" 
+      :ipad="{offset:2,span:12}" 
+      :narrow-pc="{offset:8,span:2}"
+      :pc="{offset:6,span:6}"
+      :wide-pc="{offset:7,span:7}"
+       ><div class="col-content">col-6</div></w-col>
+      <w-col 
+      offset="5" span="8" 
+      :ipad="{offset:8,span:2}" 
+      :narrow-pc="{offset:10,span:2}"
+      :pc="{offset:6,span:6}"
+      :wide-pc="{offset:2,span:7}"
+      ><div class="col-content">col-8</div></w-col>
     </w-row>
   </div>
-
 </div>
 </template>
 <script>

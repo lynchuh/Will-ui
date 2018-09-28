@@ -1,18 +1,10 @@
 <template>
 <div>
-  <h3>偏移网格</h3>
-  <div class="demo">
-    <w-row>
-      <w-col span="4" offset="6">col-4</w-col>
-      <w-col span="10" offset="4">col-10</w-col>
-    </w-row>
-    <w-row>
-      <w-col span="6" >col-6</w-col>
-      <w-col span="8" offset="4">col-8</w-col>
-    </w-row>
-    <w-row>
-      <w-col span="6" offset="3">col-6</w-col>
-      <w-col span="8" offset="7">col-8</w-col>
+    <h3>间隙网格</h3>
+  <div class="demo gutter">
+    <w-row gutter="20">
+      <w-col span="6" ><div class="col-content">col-6</div></w-col>
+      <w-col span="8" ><div class="col-content">col-8</div></w-col>
     </w-row>
   </div>
 
