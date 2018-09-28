@@ -1,5 +1,9 @@
 # Will
-基于Vue实现的UI库      [![Build Status](https://travis-ci.org/lynchuh/Will.svg?branch=master)](https://travis-ci.org/lynchuh/Will)
+
+[![Build Status](https://travis-ci.org/lynchuh/Will.svg?branch=master)](https://travis-ci.org/lynchuh/Will)
+
+
+[点击查看文档](https://lynchuh.github.io/Will/)
 
 Will-UI是一个基于Vue 2.x的前端UI组件库，它提供了 button、input、tabs等常用组件，适合移动端和 PC 端使用。
 
@@ -18,4 +22,11 @@ Will-UI是一个基于Vue 2.x的前端UI组件库，它提供了 button、input�
 ## 快速上手
 
 ## 组件介绍
-  [点击查看文档](https://lynchuh.github.io/Will/)
+    - button -按钮
+    - input - 输入框
+    - layout - 布局
+    - grid  - 网格系统
+    - toast - 提示弹出框
+    - popover - 气泡卡片
+    - tabs - 标签页
+    - collapse - 折叠面板

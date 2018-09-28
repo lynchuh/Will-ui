@@ -1,8 +1,8 @@
 {
-  "name": "will",
-  "version": "0.0.1",
+  "name": "will-ui",
+  "version": "0.0.3",
   "description": "基于Vue实现的UI库",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "parcel index.html --no-cache",
     "dev-test": "parcel watch test/* --no-cache & karma start",
@@ -25,9 +25,7 @@
   },
   "homepage": "https://github.com/lynchuh/will-component#readme",
   "dependencies": {
-    "eslint": "^5.6.0",
-    "vue": "^2.5.17",
-    "vue-hot-reload-api": "^2.3.1"
+    "vue": "^2.5.17"
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^2.2.0",
@@ -42,11 +40,11 @@
     "mocha": "^5.2.0",
     "node-sass": "^4.9.3",
     "parcel-bundler": "^1.9.7",
-    "sass-loader": "^7.1.0",
     "sinon": "^6.2.0",
     "sinon-chai": "^3.2.0",
     "vue-template-compiler": "^2.5.17",
-    "vuepress": "^0.14.4"
+    "vuepress": "^0.14.4",
+    "sass-loader": "7.1.0"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"

@@ -4,9 +4,10 @@
 .vscode
 # pacel build 产生的缓存
 .cache
+
 #
 .npmrc
 
-/dist
+
 
 docs/.vuepress/dist

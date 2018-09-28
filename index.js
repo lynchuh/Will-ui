@@ -1,24 +1,32 @@
-import Button from './button.vue'
-import ButtonGroup from './button-group'
-import Icon from './icon'
-import Input from './input'
-import Row from './row'
-import Column from './column'
-import Layout from './layout'
-import Header from './header'
-import Content from './content'
-import Sider from './sider'
-import Footer from './footer'
-import Toast from './toast'
-import Toastplugin from './toastPlugin'
-import Tabs from './tabs'
-import TabsHead from './tabs-head'
-import TabsBody from './tabs-body'
-import TabsItem from './tabs-item'
-import TabsPane from './tabs-pane'
-import Popover from './popover'
-import Collapse from './collapse'
-import CollapseItem from './collapse-item'
+import Button from './src/button'
+import ButtonGroup from './src/button-group'
+import Icon from './src/icon'
+
+import Input from './src/input'
+
+import Row from './src/row'
+import Column from './src/column'
+
+import Layout from './src/layout'
+import Header from './src/header'
+import Content from '/src/content'
+import Sider from './src/sider'
+import Footer from './src/footer'
+
+import Toast from './src/toast'
+import Toastplugin from './src/toastPlugin'
+
+import Tabs from './src/tabs'
+import TabsHead from './src/tabs-head'
+import TabsBody from './src/tabs-body'
+import TabsItem from './src/tabs-item'
+import TabsPane from './src/tabs-pane'
+
+import Popover from './src/popover'
+
+import Collapse from './src/collapse'
+import CollapseItem from './src/collapse-item'
+
 export {
   Button,
   ButtonGroup,
