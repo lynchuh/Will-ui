@@ -1,7 +1,13 @@
 # Will
 
 [![Build Status](https://travis-ci.org/lynchuh/Will.svg?branch=master)](https://travis-ci.org/lynchuh/Will)
+[![NPM version][npm-image]][npm-url]
+[![npm license][license-image]][download-url]
 
+[npm-image]: https://img.shields.io/npm/v/will-ui.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/will-ui
+[download-url]: https://npmjs.org/package/will-ui
+[license-image]: https://img.shields.io/npm/l/will-ui.svg
 
 [点击查看文档](https://lynchuh.github.io/Will/)
 

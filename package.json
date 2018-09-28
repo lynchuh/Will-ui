@@ -1,14 +1,16 @@
 {
   "name": "will-ui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "基于Vue实现的UI库",
   "main": "dist/index.js",
   "scripts": {
     "start": "parcel index.html --no-cache",
+    "build":" parcel build index.js --no-minify --no-cache",
     "dev-test": "parcel watch test/* --no-cache & karma start",
     "test": "parcel build test/* --no-cache --no-minify && karma start --single-run",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
+
   },
   "repository": {
     "type": "git",

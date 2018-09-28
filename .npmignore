@@ -7,3 +7,11 @@ deploy.sh
 /test
 karma.conf.js
 .travis.yml
+.*.swp
+._*
+.DS_Store
+.git
+.lock-wscript
+.wafpickle-*
+config.gypi
+npm-debug.log
