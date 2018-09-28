@@ -26,7 +26,9 @@ describe('TabsItem', () => { //BDD 行为驱动测试
       const Constructor = Vue.extend(TabsItem)
       const vm = new Constructor({
         propsData:{
-          disabled: true
+          disabled: true,
+          label:'xxx'
+
         }
       }).$mount()
       expect(vm.$el.classList.contains('disabled')).to.be.true
@@ -50,7 +52,8 @@ describe('TabsItem', () => { //BDD 行为驱动测试
       const Constructor = Vue.extend(TabsItem)
       const vm = new Constructor({
         propsData:{
-          icon:'setting'
+          icon:'setting',
+          label:'xxx'
         }
       }).$mount()
       const Iconelement = vm.$el.querySelector('use')

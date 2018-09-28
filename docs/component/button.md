@@ -82,7 +82,8 @@
   | icon-position | 选择图标显示位置 | String | left / right | left |
   | loading | 是否显示加载(loading状态与icon不可共存) | Boolean |     | false |
 
-  - 可选图标  
+
+  ## 可选图标  
   
   <ClientOnly>
   <icon-demo></icon-demo>

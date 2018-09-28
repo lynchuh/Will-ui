@@ -20,7 +20,8 @@ export default {
   },
   props: {
     label: {
-      type: [String, Number]
+      type: [String, Number],
+      required:true
     },
     icon: {
       type: String
