@@ -22,31 +22,22 @@
   <popover-demo-2></popover-demo-2>
   </ClientOnly>
 
-  ```vue
-<w-input placeholder="支持事件触发" 
-  @change="onChange" 
-  @blur="onBlur" 
-  @focus="onFocus" 
-  @input="onInput"
-></w-input>
-<script>
-  export defalut{
-    methods:{
-      onChange($event){
-        //得到change的event对象
-      },
-      onBlur($event){
-        //得到blur的event对象
-      },
-      onFocus($event){
-        //得到focus的event对象
-      },
-      onInput(value){
-        //得到Input事件触发时的value值
-      }
-    }
-  }
-</script>
+  ```vue{9}
+<w-popover position="bottom">
+  <div slot="content">
+    <h4>这是标题</h4>
+    <div>这是一段内容。</div>
+  </div>
+  <w-button>click 弹出</w-button>
+</w-popover>
+
+<w-popover trigger="hover">
+  <div slot="content">
+    <h4>这是标题</h4>
+    <div>这是一段内容。</div>
+  </div>
+  <w-button >hover 弹出</w-button>
+</w-popover>
 ```
 
 
@@ -54,7 +45,7 @@
   <popover-demo-3></popover-demo-3>
   </ClientOnly>
 
-  ```vue
+  ```vue{1,9,17,25}
 <w-popover trigger="hover">
   <div slot="content">
     <h4>这是标题</h4>

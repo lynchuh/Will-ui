@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="w-grid-demo">
   <h3>响应式布局</h3>
   <div class="demo">
     <w-row>
@@ -32,34 +32,5 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  h3{
-    margin:26px 0;
-  }
-  .demo{
-    box-shadow: 0 0 46px 0px rgba(0, 0, 0, 0.1);
-  }
-  .w-col{
-    padding:.5em 0;
-    background: #9bc1bc;
-    border: 1px solid #e6ebe0 ;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    color:#e6ebe0;
-    border-radius: 4px;
-    font-size: 14px;
-  }
-  .gutter {
-    .w-col{
-      background: inherit;
-      padding-top:0;
-      padding-bottom:0;
-      border: none;
-      .col-content{
-        background: #9bc1bc;
-        display: flex;
-        align-items: center;
-      }
-    }
-  }
+
 </style>

@@ -93,8 +93,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .w-tabs {
-  box-sizing: border-box;
   display: flex;
+  box-sizing: border-box;
   *{box-sizing: border-box;}
   &.horizontal {
     flex-direction: column;

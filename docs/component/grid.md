@@ -78,12 +78,12 @@ Will 网格系统是基于行（row）和列（col）来定义信息区块的外
 
 ```vue
 <w-row gutter="20">
-  <w-col span="6" ><div class="col-content">col-6</div></w-col>
-  <w-col span="8" ><div class="col-content">col-8</div></w-col>
+  <w-col span="6">col-6</w-col>
+  <w-col span="8">col-8</w-col>
 </w-row>
 ```
 
-> 注：:mega:  gutter的实现主要使用了`<w-col>`的`padding`属性，因此在实际应用的时候，建议在`<w-col>`里内嵌一个元素，所有CSS样式操作都在该元素上进行。
+> 注：:mega:  示例中，灰色边框是`<w-col>`的border，而有颜色的区域为内容区。可以看出，gutter的实现主要使用了`<w-col>`的`padding`属性，因此在实际应用的时候，建议不要对`<w-col>`元素进行CSS的样式操作，以免出现不必要的样式bug
 
 <ClientOnly>
   <grid-demo-4></grid-demo-4>

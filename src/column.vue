@@ -1,6 +1,8 @@
 <template>
   <div class="w-col" :class="classes" :style="colStyle">
+    <div class="w-content-wrapper">
     <slot></slot>
+    </div>
   </div>
 </template>
 <script>
@@ -102,6 +104,9 @@ $class-wide-pc-offset-prefix: "offset-wide-pc-";
     &.#{$class-offset-prefix}#{$n} {
       margin-left: ($n/24) * 100%;
     }
+  }
+  .w-content-wrapper{
+    height: 100%;
   }
 }
 @media (min-width: 577px) and (max-width: 768px) {

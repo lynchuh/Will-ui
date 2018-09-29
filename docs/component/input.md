@@ -17,7 +17,7 @@
   <input-demo-2></input-demo-2>
 </ClientOnly>
 
-```vue
+```vue{19,20,21}
 <w-input placeholder="支持事件触发" 
   @change="onChange" 
   @blur="onBlur" 

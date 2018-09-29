@@ -43,7 +43,7 @@ Toast组件的实现应用了Vue的插件，在Vue.prototype中添加了全局�
   <toast-demo-3></toast-demo-3>
 </ClientOnly>
 
-```vue
+```vue{8,9}
 <style>
   .toast-wrapper{
     z-index:20
@@ -51,6 +51,8 @@ Toast组件的实现应用了Vue的插件，在Vue.prototype中添加了全局�
 </style>
 <w-button @click="onClickButton">支持HTML</w-button>
 <script>
+  import {Toastplugin} from Will
+  Vue.use(Toastplugin)
   methods:{
     onClickButton(){
       this.$toast("<strong style='color:red;'>加粗的提示</strong>",
@@ -64,7 +66,7 @@ Toast组件的实现应用了Vue的插件，在Vue.prototype中添加了全局�
   <toast-demo-4></toast-demo-4>
 </ClientOnly>
 
-```vue
+```vue{9,10,16,17,18,19,20}
 <style>
   .toast-wrapper{
     z-index:20

@@ -53,7 +53,17 @@
 </w-layout>
 ```
 
-<ClientOnly>
+## Sider Attribute  :stars:
+
+  - 侧边栏 sider 的属性说明如下：
+
+  | 参数 | 说明 | 类型 | 可选值 | 默认值 |
+  | ---- |:----:|:----:|:----:|:----:|
+  | needhide | 侧边栏是否可隐藏 | Boolean |     | false |
+
+ - 使用 needhide属性隐藏侧边栏
+
+  <ClientOnly>
   <layout-demo-4></layout-demo-4>
 </ClientOnly>
 
@@ -67,17 +77,3 @@
   </w-layout>
 </w-layout>
 ```
-
-## Sider Attribute  :stars:
-
-  - 侧边栏 sider 的属性说明如下：
-
-  | 参数 | 说明 | 类型 | 可选值 | 默认值 |
-  | ---- |:----:|:----:|:----:|:----:|
-  | needhide | 侧边栏是否可隐藏 | Boolean |     | false |
-
- - 使用 needhide属性隐藏侧边栏
-
-  <ClientOnly>
-  <layout-demo-2></layout-demo-2>
-</ClientOnly>

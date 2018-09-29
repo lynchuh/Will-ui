@@ -1,8 +1,8 @@
 <template>
   <div>
     <h3>两种触发方式</h3>
-    <p>hover / click</p>
-    <w-popover>
+    <p>click / hover</p>
+    <w-popover position="bottom">
       <div slot="content">
         <h4>这是标题</h4>
         <div>这是一段内容。</div>

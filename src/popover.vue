@@ -145,6 +145,7 @@ $popover-background: white;
   }
 }
 .content-wrapper {
+  z-index:1;
   display: inline-block;
   position: absolute;
   background: $popover-background;
