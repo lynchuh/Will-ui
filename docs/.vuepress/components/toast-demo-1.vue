@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>基础用法</h3>
+    <h3>1. 基础用法</h3>
     <p>基础有三个位置选择：top、middle、bottom。默认方位为top</p>
     <div class="demo">
       <w-button @click="$toast('这是从上方弹出的信息')">上方弹出</w-button>

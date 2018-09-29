@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>图标按钮</h3>
+    <h3>2. 图标按钮</h3>
     <p>带图标的无文字按钮，可节省空间。</p>
     <div class="iconButton">
       <w-button icon="setting"></w-button>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>四种Input状态</h3>
+    <h3>1. 四种Input状态</h3>
     <div class="example">
       <div>
         <p>基础用法</p>

@@ -1,6 +1,6 @@
 <template>
 <div class="w-grid-demo">
-  <h3>偏移网格</h3>
+  <h3>2. 偏移网格</h3>
   <div class="demo">
     <w-row>
       <w-col span="4" offset="6">col-4</w-col>

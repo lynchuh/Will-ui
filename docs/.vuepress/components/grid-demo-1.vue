@@ -1,6 +1,6 @@
 <template>
 <div class="w-grid-demo">
-  <h3>基础网格</h3>
+  <h3>1. 基础网格</h3>
   <div class="demo">
     <w-row>
       <w-col span="24">100%</w-col>

@@ -1,6 +1,6 @@
 <template>
 <div class="w-grid-demo">
-    <h3>间隙网格</h3>
+    <h3>3. 间隙网格</h3>
   <div class="demo gutter">
     <w-row gutter="20">
       <w-col span="6" >col-6</w-col>

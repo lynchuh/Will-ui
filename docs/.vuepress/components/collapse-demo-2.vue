@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>同时显示多个面板</h3>
+    <h3>2. 同时显示多个面板</h3>
     <w-collapse  :selected-array.sync="selectedArray" >
       <w-collapse-item title="标题一" :index="1">
         <div>

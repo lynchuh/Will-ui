@@ -1,6 +1,6 @@
 <template>
 <div style="margin-top:26px">
-  <h3>定义tabs方向</h3>
+  <h3>3. 定义tabs方向</h3>
   <div class="demo">
     <w-tabs selected="first-tab" direction="vertical"  style="margin-top:20px;">
       <w-tabs-head>

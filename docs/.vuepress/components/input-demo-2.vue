@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>支持Input事件</h3>
+    <h3>2. 支持Input事件</h3>
     <p>支持Input事件触发：change、blur、focus、input</p>
       <div>
         <w-input placeholder="支持事件触发" ></w-input>

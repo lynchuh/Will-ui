@@ -1,6 +1,6 @@
 <template>
 <div class="w-grid-demo">
-  <h3>响应式布局</h3>
+  <h3>4. 响应式布局</h3>
   <div class="demo">
     <w-row>
       <w-col 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>常见页面布局</h3>
+    <h3> 常见页面布局</h3>
       <div class="demo">
         <w-layout class="w-layout">
           <w-header class="w-header">Header</w-header>

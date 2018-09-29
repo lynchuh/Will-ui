@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>四种方位选择</h3>
+    <h3>3. 四种方位选择</h3>
     <p>top bottom left right</p>
     <w-popover trigger="hover">
       <div slot="content">

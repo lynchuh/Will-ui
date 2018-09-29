@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>四种Input状态</h3>
+    <h3>3. 双向绑定</h3>
       <div class="model-wrapper">
         <div class="model">
         <w-input placeholder="双向绑定value值" v-model="message" class="model-input"></w-input>

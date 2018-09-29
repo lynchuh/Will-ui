@@ -1,6 +1,6 @@
 <template>
 <div style="margin-top:26px">
-  <h3>使用有图标的tab</h3>
+  <h3>4. 使用有图标的tab</h3>
   <div class="demo">
     <w-tabs selected="first-tab" style="margin-top:20px;">
       <w-tabs-head>

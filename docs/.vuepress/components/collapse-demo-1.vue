@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>显示单个面板</h3>
+    <h3>1. 显示单个面板</h3>
     <w-collapse  :selected.sync="selectedItem" single>
       <w-collapse-item title="标题一" :index="1">
         <div>

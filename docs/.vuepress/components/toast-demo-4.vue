@@ -1,6 +1,6 @@
 <template>
   <div class="toast-demo-3">
-    <h3>自定义关闭按钮</h3>
+    <h3>4. 自定义关闭按钮</h3>
     <p>自定义关闭按钮的文字信息及回调函数</p>
     <div class="demo">
       <w-button @click="$toast(`你的智商目前为${parseInt(Math.random()*100)}`,{autoClose:false,})">默认关闭</w-button>

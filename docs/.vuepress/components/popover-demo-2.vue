@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>两种触发方式</h3>
+    <h3>2. 两种触发方式</h3>
     <p>click / hover</p>
     <w-popover position="bottom">
       <div slot="content">

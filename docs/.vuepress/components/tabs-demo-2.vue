@@ -1,6 +1,6 @@
 <template>
 <div style="margin-top:26px">
-  <h3>禁用某项</h3>
+  <h3>2. 禁用某项</h3>
   <div class="demo">
     <w-tabs selected="first-tab"  style="margin-top:20px;">
       <w-tabs-head>

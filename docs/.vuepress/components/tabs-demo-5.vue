@@ -1,6 +1,6 @@
 <template>
 <div style="margin-top:26px">
-  <h3>附加内容</h3>
+  <h3>5. 附加内容</h3>
   <p>可以在页签右边添加附加操作（只有在direction为 horizontal 时才生效 ）</p>
   <div class="demo">
     <w-tabs selected="first-tab" style="margin-top:20px;">

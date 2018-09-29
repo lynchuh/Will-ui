@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>按钮组</h3>
+    <h3>3. 按钮组</h3>
     <p>以按钮组的方式出现，常用于多项类似操作。</p>
     <div class="groupButton">
       <w-button-group class="groupItem">

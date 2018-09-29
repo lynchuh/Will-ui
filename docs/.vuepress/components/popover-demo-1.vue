@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>基本用法</h3>
+    <h3>1. 基本用法</h3>
     <p>基本用法，浮层的大小由内容区域决定。</p>
     <w-popover>
       <div slot="content">

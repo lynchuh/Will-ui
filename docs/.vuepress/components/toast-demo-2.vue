@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>可关闭</h3>
+    <h3>2. 可关闭</h3>
     <p>可以添加关闭按钮，或自主选择关闭时间，默认5秒消失</p>
     <div class="demo">
       <w-button @click="$toast('点击右边按钮关闭弹框',{autoClose:false,position:'middle'})">出现关闭按钮</w-button>

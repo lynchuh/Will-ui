@@ -1,9 +1,9 @@
 <template>
   <div class="toast-demo-3">
-    <h3>支持Html片段</h3>
+    <h3>3. 支持Html片段</h3>
     <p>默认不支持HTML片段，因为容易受到XSS攻击。但当开启 enableHtml 后，toast接受HTML片段</p>
     <div class="demo">
-      <w-button @click="$toast(`<strong style='color:red;'>加粗的提示</strong>`,{enableHtml:true,autoClose:false})">支持HTML</w-button>
+      <w-button @click="$toast(`<strong style='color:red;'>加粗的提示</strong>`,{enableHtml:true})">支持HTML</w-button>
     </div>
   </div>
 </template>
