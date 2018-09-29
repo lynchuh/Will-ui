@@ -29,7 +29,7 @@ Will-ui是一个基于Vue 2.x的前端UI组件库，它提供了 button、input�
 
 2. 引入will-ui
 
-````
+```
 //引入Button 组件
     import {Button} from 'will-ui'
     import 'will-ui/dist/index.css'
