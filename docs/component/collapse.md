@@ -7,7 +7,7 @@
   <collapse-demo-1></collapse-demo-1>
   </ClientOnly>
 
-```vue
+```vue{1,12}
 <w-collapse  :selected.sync="selectedItem" single>
   <w-collapse-item title="标题一" :index="1">
     <div>内容一</div>
@@ -19,6 +19,7 @@
     <div>内容三</div>
   </w-collapse-item>
 </w-collapse>
+{{selectedItem}}
 <script>
 data(){
   return{
@@ -32,7 +33,7 @@ data(){
   <collapse-demo-2></collapse-demo-2>
   </ClientOnly>
 
-```vue
+```vue{1,12}
 <w-collapse  :selected-array.sync="selectedArray" >
   <w-collapse-item title="标题一" :index="1">
     <div>内容一</div>
@@ -44,6 +45,7 @@ data(){
     <div>内容三</div>
   </w-collapse-item>
 </w-collapse>
+{{selectedArray}}
 <script>
 data(){
   return{

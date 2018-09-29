@@ -2,7 +2,7 @@
 title:首页
 ---
 # 首页 
-[![Build Status](https://travis-ci.org/lynchuh/Will.svg?branch=master)](https://travis-ci.org/lynchuh/Will)
+[![Build Status](https://travis-ci.org/lynchuh/Will-ui.svg?branch=master)](https://travis-ci.org/lynchuh/Will-ui)
  [![NPM version][npm-image]][npm-url]
 [![npm license][license-image]][download-url]
 

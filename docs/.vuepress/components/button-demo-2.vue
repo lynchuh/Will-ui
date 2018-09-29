@@ -28,6 +28,11 @@ export default {
     "w-button": Button,
     "w-button-group": ButtonGroup,
     "w-popover": Popover
+  },
+  data(){
+    return{
+      iconloading:false
+    }
   }
 };
 </script>

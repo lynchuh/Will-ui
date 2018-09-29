@@ -17,6 +17,11 @@ export default {
   components: {
     "w-button": Button,
     "w-button-group": ButtonGroup,
+  },
+  data(){
+    return{
+      loading: false 
+    }
   }
 };
 </script>
