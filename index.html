@@ -6,11 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <style>
+    .w-carousel-item{
+      height: 200px;
+      width: 400px;
+    }
+    .w-carousel-item:nth-child(1){
+      background: blue;
+    }
+    .w-carousel-item:nth-child(2){
+      background: yellow;
+    }
+    .w-carousel-item:nth-child(3){
+      background: green;
+    }
+  </style>
 </head>
 
 <body>
   <div id="app">
-    <div style="margin:20px 10px">
+    <w-carousel 
+    >
+      <w-carousel-item v-for="(item,index) in 3" :key="item" :index="index">{{item}}123</w-carousel-item>
+    </w-carousel>
+
+
+    <!-- <div style="margin:20px 10px">
       <div>button组件</div>
       <div>
         <w-button icon="setting" icon-position="left">按钮</w-button>
@@ -146,7 +167,7 @@
       <w-button @click="showmiddletoast">中间弹出</w-button>
       <w-button @click="showToptoast">上方弹出</w-button>
       <w-button @click="showdowntoast">下方弹出</w-button>
-    </div>
+    </div> -->
 
     <!-- <w-row>
       <w-col span="5"></w-col>

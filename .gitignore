@@ -9,5 +9,6 @@
 .npmrc
 
 
+dist
 
-# docs/.vuepress/dist
+docs/.vuepress/dist

@@ -27,8 +27,11 @@ import Popover from './popover'
 import Collapse from './collapse'
 import CollapseItem from './collapse-item'
 
+import Carousel from './carousel'
+import CarouselItem from './carousel-item'
 
-
+Vue.component('w-carousel',Carousel)
+Vue.component('w-carousel-item',CarouselItem)
 
 Vue.component('w-collapse',Collapse)
 Vue.component('w-collapse-item',CollapseItem)
