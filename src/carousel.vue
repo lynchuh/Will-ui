@@ -55,19 +55,17 @@ export default {
     },
 
     ClickIndicator($event,index){
-      console.log(index)
       this.currentCarousel = index
-      console.log(this.currentCarousel)
     },
     ClickArrow($event,target){
       if(target === 'pre'){
 
-        this.currentCarousel = this.currentCarousel === 0 ? this.maxCarousel : this.currentCarousel - 1
+        this.currentCarousel = this.currentCarousel === 0 ? this.maxCarousel-1 : this.currentCarousel - 1
 
       }else if(target === 'next'){
 
-        this.currentCarousel = this.currentCarousel === this.maxCarousel ? 0 : this.currentCarousel + 1
-        
+        this.currentCarousel = this.currentCarousel === this.maxCarousel-1 ? 0 : this.currentCarousel + 1
+
       }
 
     }
@@ -75,7 +73,7 @@ export default {
   watch:{
     currentCarousel(newVal,oldVal){
       console.log(newVal)
-      this.eventBus.$emit('carouselGoing',this.currentCarousel,this.maxCarousel)
+      this.eventBus.$emit('carouselGoing',newVal,this.maxCarousel)
     }
   }
 };
@@ -86,6 +84,7 @@ export default {
     // min-height:250px;
     border:1px solid red;
     position:relative;
+    // overflow: hidden;
     .w-carousel-arrow{
       border:none;
       outline: none;
@@ -112,7 +111,7 @@ export default {
       }
     }
     .w-carousel-wrapper{
-      overflow-x: hidden;
+      // overflow-x: hidden;
       background:grey;
       min-height:200px;
       .w-carousel-item{

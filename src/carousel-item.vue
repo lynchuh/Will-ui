@@ -1,43 +1,56 @@
 <template>
-  <div class="w-carousel-item"> 
-
+  <div class="w-carousel-item" 
+    :style="itemStyle"
+    v-show="isOthers"
+   > 
+  <slot></slot>
   </div>
 </template>
 <script>
 export default {
-  name:"WillCarouselItem",
-  props:{
-    index:{
-      required:true,
-      type:[Number,String]
+  name: "WillCarouselItem",
+  props: {
+    index: {
+      required: true,
+      type: [Number, String]
     }
   },
-  inject:['eventBus'],
-  mounted(){
-    this.eventBus.$on('carouselGoing',this.x)
+  data() {
+    return {
+      itemStyle:{
+      },
+      width:0,
+      isOthers:true
+    };
   },
-  created(){
-
+  inject: ["eventBus"],
+  mounted() {
+    this.eventBus.$on("carouselGoing", this.x);
+    this.width = this.$el.clientWidth
   },
-  methods :{
-    x(currentItem,maxItem){
-      switch(currentItem){
-        case currentItem === 0:
-          
-          break;
-        case currentItem === maxItem :
-
-          break;
-        default :
-
-          break;
+  created() {
+  },
+  methods: {
+    x(currentItem, maxItem) {
+      this.itemStyle = (currentItem === maxItem -1 && this.index ===0) ? {
+        transform: `translateX(${this.width}px)`
+      } : {
+        transform: `translateX(${this.width *(this.index - currentItem)}px)`
       }
-      console.log(currentItem === this.index)
+      if(currentItem === 0){
 
+      } else if(currentItem === maxItem -1){
+        this.isOthers = (this.index === currentItem || this.index === 0 ) ? true :false
+      } else{
+        this.isOthers = ( (this.index === currentItem || this.index === 0 ) )
+      } 
     }
   }
-}
+};
 </script>
 <style lang="scss" scoped>
+.w-carousel-item {
+  transition: all 0.5s;
 
+}
 </style>
