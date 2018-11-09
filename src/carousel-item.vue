@@ -29,7 +29,7 @@ export default {
   },
   inject: ['eventBus'],
   mounted() {
-    this.eventBus.$on('carouselGoing', this.carouselGoing)
+    this.eventBus.$on('carouselGoing', this.changeCurrent)
   },
   created() {
     this.eventBus.$on('initData', (maxCarousel, currentCarousel, width) => {
@@ -40,6 +40,9 @@ export default {
     })
   },
   methods: {
+    changeCurrent(currentCarousel){
+      this.currentCarousel = currentCarousel
+    },
     changePosition(value){
       let copyStyle = {}
       let multiple
@@ -73,22 +76,23 @@ export default {
       this.itemStyle = copyStyle
     },
     carouselGoing(value, oldValue) {
-
       if (this.index == value) {
-        console.log('new',this.index)
-        // copyStyle['visibility'] = 'visible'
+        this.isShow = true
       } else if (this.index == oldValue) {
-        console.log('old',this.index)
-        // copyStyle['visibility'] = 'visible'
+        this.isShow = true
       } else {
-        console.log('others',this.index)
+        this.isShow = false
       }
-
       this.changePosition(value)
-      
     },
     x(){
       console.log('transitionend')
+      this.isShow = this.index === this.currentCarousel ? true :false
+    }
+  },
+  watch:{
+    currentCarousel(value,oldValue){
+      this.carouselGoing(value,oldValue)
     }
   }
 }
@@ -96,5 +100,9 @@ export default {
 <style lang="scss" scoped>
 .w-carousel-item {
   transition: all 5s;
+  visibility: hidden;
+  &.isShow{
+    visibility: visible;
+  }
 }
 </style>
