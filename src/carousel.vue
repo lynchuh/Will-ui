@@ -88,7 +88,7 @@ export default {
   // min-height:250px;
   border: 1px solid red;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   .w-carousel-arrow {
     border: none;
     outline: none;

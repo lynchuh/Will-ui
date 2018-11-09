@@ -1,8 +1,9 @@
 <template>
   <div class="w-carousel-item" 
-    :class= "[{'current':index===currentCarousel}]"
+    :class= "{isShow}"
     :style="itemStyle"
     v-show="itemStyle"
+    @transitionend = x
    > 
   <slot></slot>
   </div>
@@ -22,12 +23,13 @@ export default {
       itemStyle: null,
       width: 0,
       maxCarousel: 0,
-      currentCarousel: 0
+      currentCarousel: 0,
+      isShow: false
     }
   },
   inject: ['eventBus'],
   mounted() {
-    this.eventBus.$on('carouselGoing', this.changeCurrent)
+    this.eventBus.$on('carouselGoing', this.carouselGoing)
   },
   created() {
     this.eventBus.$on('initData', (maxCarousel, currentCarousel, width) => {
@@ -38,62 +40,61 @@ export default {
     })
   },
   methods: {
-    changeCurrent(currentCarousel) {
-      this.currentCarousel = currentCarousel
-    },
-    carouselGoing(value, oldValue) {
+    changePosition(value){
       let copyStyle = {}
       let multiple
-      if (this.index == value) {
-        console.log('new',this.index)
-        copyStyle['visibility'] = 'visible'
-      } else if (this.index == oldValue) {
-        console.log('old',this.index)
-        copyStyle['visibility'] = 'visible'
-      } else {
-        console.log('others',this.index)
-      }
-
-
+      const index = this.index,maxCarousel = this.maxCarousel
       switch (value) {
         case 0:
-          if (this.index === 1) {
+          if (index === 1) {
             multiple = 1
-          } else if (this.index === 0) {
+          } else if (index === 0) {
             multiple = 0
           } else {
-            multiple = this.index - this.maxCarousel
+            multiple = index - maxCarousel
           }
           break
-        case this.maxCarousel - 1:
-          multiple = this.index === 0 ? 1 : this.index - value
+        case maxCarousel - 1:
+          multiple = index === 0 ? 1 : index - value
           break
         default:
-          if (this.index === value + 1) {
+          if (index === value + 1) {
             multiple = 1
           } else {
             multiple =
-              this.index > value
-                ? this.index - value - this.maxCarousel
-                : this.index - value
+              index > value
+                ? index - value - maxCarousel
+                : index - value
           }
           break
       }
       // console.log('index:',this.index,'倍数', multiple)
       copyStyle.transform = ` translateX(${this.width * multiple}px)`
       this.itemStyle = copyStyle
-    }
-  },
-  watch: {
-    currentCarousel(value, oldValue) {
-      this.carouselGoing(value, oldValue)
+    },
+    carouselGoing(value, oldValue) {
+
+      if (this.index == value) {
+        console.log('new',this.index)
+        // copyStyle['visibility'] = 'visible'
+      } else if (this.index == oldValue) {
+        console.log('old',this.index)
+        // copyStyle['visibility'] = 'visible'
+      } else {
+        console.log('others',this.index)
+      }
+
+      this.changePosition(value)
+      
+    },
+    x(){
+      console.log('transitionend')
     }
   }
 }
 </script>
 <style lang="scss" scoped>
 .w-carousel-item {
-  transition: all 0.5s;
-  visibility: hidden;
+  transition: all 5s;
 }
 </style>
